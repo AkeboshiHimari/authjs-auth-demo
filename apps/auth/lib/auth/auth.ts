@@ -24,7 +24,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 				token.twitter = data?.twitter?.name;
 			}
 			if (trigger === "update" && session) {
-				console.log('update')
 				const data = await findUser(token.sub as string);
 				token.name = data?.name
 				token.role = data?.role;

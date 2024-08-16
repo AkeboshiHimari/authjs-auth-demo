@@ -291,6 +291,7 @@ export function EditProfile({ id }: { id: string }) {
 				<Label htmlFor="username">Username</Label>
 				<Input
 					id="username"
+					className="text-[16px]"
 					onChange={(e) => setName(e.target.value)}
 					value={name}
 				/>

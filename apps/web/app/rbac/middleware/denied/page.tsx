@@ -1,4 +1,3 @@
-import { auth } from "@/auth";
 import Link from "next/link";
 
 export default async function Page() {
