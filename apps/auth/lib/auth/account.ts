@@ -28,12 +28,10 @@ export const findUser = async (id: string) => {
 	return users.findOne({ _id: new ObjectId(id) });
 };
 
-
 export const unlinkProfile = async (
 	id: string,
 	provider: string,
 ): Promise<boolean> => {
-	await new Promise((resolve) => setTimeout(resolve, 1000));
 	if (!ObjectId.isValid(id)) {
 		return false;
 	}
@@ -56,7 +54,6 @@ export const unlinkProfile = async (
 		return false;
 	}
 };
-
 
 /**
  * 사용자의 프로필을 연결합니다.
@@ -111,7 +108,6 @@ export const linkProfile = async (
 	}
 };
 
-
 interface GoogleProfile {
 	sub: string;
 	name: string;
@@ -127,9 +123,7 @@ interface TwitterProfile {
 	};
 }
 
-
 export const deleteAccount = async (id: string): Promise<boolean> => {
-	await new Promise((resolve) => setTimeout(resolve, 1000));
 	if (!ObjectId.isValid(id)) {
 		return false;
 	}
@@ -144,9 +138,7 @@ export const deleteAccount = async (id: string): Promise<boolean> => {
 	}
 };
 
-
 export const upgradeAccount = async (id: string): Promise<boolean> => {
-	await new Promise((resolve) => setTimeout(resolve, 1000));
 	if (!ObjectId.isValid(id)) {
 		return false;
 	}
@@ -161,7 +153,6 @@ export const upgradeAccount = async (id: string): Promise<boolean> => {
 	}
 };
 
-
 export const editUsername = async (
 	id: string,
 	name: string,
@@ -170,7 +161,6 @@ export const editUsername = async (
 		.replace(/<[^>]*>?/gm, "")
 		.trim()
 		.slice(0, 50);
-	await new Promise((resolve) => setTimeout(resolve, 1000));
 	if (!ObjectId.isValid(id)) {
 		return false;
 	}
@@ -185,8 +175,6 @@ export const editUsername = async (
 	}
 };
 
-
 export const handleSignOut = async (): Promise<void> => {
-	await new Promise((resolve) => setTimeout(resolve, 1000));
 	await signOut({ redirectTo: "/" });
 };
