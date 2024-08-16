@@ -29,7 +29,6 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
-				domain: isProduction ? ".vercel.app" : "localhost",
 			},
 		},
 		callbackUrl: {
@@ -38,7 +37,6 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
-				domain: isProduction ? ".vercel.app" : "localhost",
 			},
 		},
 		csrfToken: {
