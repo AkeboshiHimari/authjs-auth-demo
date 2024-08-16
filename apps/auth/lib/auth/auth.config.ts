@@ -29,7 +29,9 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
-				domain: ".vercel.app",
+				domain: isProduction
+					? `.${process.env.NEXT_PUBLIC_BASE_URL}`
+					: "localhost",
 			},
 		},
 		callbackUrl: {
@@ -38,7 +40,9 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
-				domain: ".vercel.app",
+				domain: isProduction
+					? `.${process.env.NEXT_PUBLIC_BASE_URL}`
+					: "localhost",
 			},
 		},
 		csrfToken: {
@@ -48,7 +52,6 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
-				domain: ".vercel.app",
 			},
 		},
 	},
