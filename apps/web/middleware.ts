@@ -15,7 +15,7 @@ export default auth((req) => {
 		req.auth?.user.role !== "super" &&
 		req.nextUrl.pathname === "/rbac/middleware"
 	) {
-		const newUrl = new URL("/rbac/middleware/error", req.nextUrl.origin);
+		const newUrl = new URL("/rbac/middleware/denied", req.nextUrl.origin);
 		return Response.redirect(newUrl);
 	}
 });
