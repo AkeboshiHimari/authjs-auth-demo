@@ -3,9 +3,10 @@ const isProduction = process.env.NODE_ENV === "production";
 
 export default {
 	providers: [],
+	/*
 	cookies: {
 		sessionToken: {
-			name: `${isProduction ? "__Secure-" : ""}next-auth.session-token`,
+			name: `${isProduction ? "__Secure-" : ""}authjs.session-token`,
 			options: {
 				httpOnly: true,
 				sameSite: "lax",
@@ -17,7 +18,7 @@ export default {
 			},
 		},
 		callbackUrl: {
-			name: `${isProduction ? "__Secure-" : ""}next-auth.callback-url`,
+			name: `${isProduction ? "__Secure-" : ""}authjs.callback-url`,
 			options: {
 				sameSite: "lax",
 				path: "/",
@@ -28,7 +29,7 @@ export default {
 			},
 		},
 		csrfToken: {
-			name: `${isProduction ? "__Host-" : ""}next-auth.csrf-token`,
+			name: `${isProduction ? "__Host-" : ""}authjs.csrf-token`,
 			options: {
 				httpOnly: true,
 				sameSite: "lax",
@@ -37,4 +38,5 @@ export default {
 			},
 		},
 	},
+	*/
 } satisfies NextAuthConfig;
