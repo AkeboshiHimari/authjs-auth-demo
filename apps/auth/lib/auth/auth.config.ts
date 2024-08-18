@@ -34,26 +34,5 @@ export default {
 					: "localhost",
 			},
 		},
-		callbackUrl: {
-			name: `${isProduction ? "__Secure-" : ""}authjs.callback-url`,
-			options: {
-				sameSite: "lax",
-				path: "/",
-				secure: isProduction,
-				domain: isProduction
-					? `.${process.env.NEXT_PUBLIC_BASE_URL}`
-					: "localhost",
-			},
-		},
-		csrfToken: {
-			name: `${isProduction ? "__Host-" : ""}authjs.csrf-token`,
-			options: {
-				httpOnly: true,
-				sameSite: "lax",
-				path: "/",
-				secure: isProduction,
-				
-			},
-		},
 	},
 } satisfies NextAuthConfig;
