@@ -6,7 +6,7 @@ export default auth((req) => {
 		req.nextUrl.pathname === ("/protected/middleware" || "/rbac/middleware")
 	) {
 		const redirectUrl =
-			process.env.NEXT_PUBLIC_AUTH_URL || "http://localhost:3001";
+			'https://auth.akeboshi.cc' || "http://localhost:3001";
 		const newUrl = new URL("/", redirectUrl);
 		return Response.redirect(newUrl);
 	}
@@ -17,7 +17,7 @@ export default auth((req) => {
 	) {
 		const newUrl = new URL(
 			"/rbac/middleware/denied",
-			`${req.nextUrl.protocol}//${req.nextUrl.host}`,
+			'https://authjs-demo.akeboshi.cc',
 		);
 		return Response.redirect(newUrl);
 	}
