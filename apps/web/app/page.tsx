@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { auth, signOut } from "../auth";
-import { Cog, LogIn, LogOut, Shield, UserRoundCheck } from "lucide-react";
+import {
+	Cog,
+	Github,
+	LogIn,
+	LogOut,
+	Shield,
+	UserRoundCheck,
+} from "lucide-react";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { SignInButton } from "@/components/signin";
@@ -59,7 +66,7 @@ export default async function Home() {
 					management page.
 				</p>
 			</div>
-			<div className="mb-32 grid gap-8 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-2 text-left">
+			<div className="grid gap-8 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-2 text-left">
 				<div className="flex flex-col gap-2 justify-start text-left">
 					<Shield className="h-8 w-8 mr-2" />
 					<p className="text-lg font-bold">Protected Pages</p>
@@ -81,6 +88,11 @@ export default async function Home() {
 					</Button>
 				</div>
 			</div>
+			<Button type="button" size="icon" variant="ghost" asChild className="mt-8">
+				<Link href="https://github.com/AkeboshiHimari/authjs-auth-demo">
+					<Github className="h-4 w-4" />
+				</Link>
+			</Button>
 		</main>
 	);
 }
