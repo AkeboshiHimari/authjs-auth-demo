@@ -52,6 +52,7 @@ export default {
 				sameSite: "lax",
 				path: "/",
 				secure: isProduction,
+				
 			},
 		},
 	},
