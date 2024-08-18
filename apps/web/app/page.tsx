@@ -39,7 +39,7 @@ export default async function Home() {
 					{session && (
 						<>
 							<form
-								action={async () => {
+								action={async (e) => {
 									"use server";
 									await signOut();
 								}}
