@@ -25,13 +25,6 @@ export default async function Home() {
 					<Profile />
 				</CardContent>
 			</Card>
-			<div className="mt-8 flex justify-center items-center w-full">
-				<Button type="button" size="icon" variant="ghost" asChild>
-					<Link href="https://github.com/AkeboshiHimari/authjs-auth-demo">
-						<Github className="h-4 w-4" />
-					</Link>
-				</Button>
-			</div>
 		</>
 	);
 }

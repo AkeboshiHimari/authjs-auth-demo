@@ -88,11 +88,6 @@ export default async function Home() {
 					</Button>
 				</div>
 			</div>
-			<Button type="button" size="icon" variant="ghost" asChild className="mt-8">
-				<Link href="https://github.com/AkeboshiHimari/authjs-auth-demo">
-					<Github className="h-4 w-4" />
-				</Link>
-			</Button>
 		</main>
 	);
 }
